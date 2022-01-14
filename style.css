@@ -414,7 +414,7 @@ section .title::after{
 
 /* teams section styling */
 .teams .title::after{
-    content: "those with me";
+    content: "Projects";
 }
 .teams .carousel .card{
     background: #222;
@@ -447,6 +447,18 @@ section .title::after{
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid var(--overlay-color);
+    transition: all 0.3s ease;
+}
+.teams a{
+    display: inline-block;
+    background: var(--overlay-color);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid var(--overlay-color);
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img{
