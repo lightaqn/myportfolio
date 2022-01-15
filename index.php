@@ -19,7 +19,6 @@ if (isset($_POST['Email'])) {
     if (
         !isset($_POST['Name']) ||
         !isset($_POST['Email']) ||
-	!isset($_POST['Subject']) ||
         !isset($_POST['Message'])
     ) {
         problem('We're sorry, but there appears to be a problem with the form you submitted.');
@@ -27,7 +26,6 @@ if (isset($_POST['Email'])) {
 
     $name = $_POST['Name']; // required
     $email = $_POST['Email']; // required
-    $email = $_POST['Subject']; // required
     $message = $_POST['Message']; // required
 
     $error_message = "";
@@ -41,9 +39,6 @@ if (isset($_POST['Email'])) {
 
     if (!preg_match($string_exp, $name)) {
         $error_message .= 'Input a valid nomenclature.<br>';
-    }
-    if (!preg_match($string_exp, $subject)) {
-        $error_message .= 'Input a valid subject.<br>';
     }
 
     if (strlen($message) < 2) {
@@ -64,7 +59,6 @@ if (isset($_POST['Email'])) {
 
     $email_message .= "Name: " . clean_string($name) . "\n";
     $email_message .= "Email: " . clean_string($email) . "\n";
-    $email_message .= "Subject: " . clean_string($subject) . "\n";
     $email_message .= "Message: " . clean_string($message) . "\n";
 
     // create email headers
@@ -72,4 +66,5 @@ if (isset($_POST['Email'])) {
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
     @mail($email_to, $email_subject, $email_message, $headers);
+
 ?>
