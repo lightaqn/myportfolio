@@ -1,4 +1,5 @@
 <?php
+include("index.html")
 if (isset($_POST['Email'])) {
 
     // EDIT THE FOLLOWING TWO LINES:
@@ -71,11 +72,4 @@ if (isset($_POST['Email'])) {
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
     @mail($email_to, $email_subject, $email_message, $headers);
-?>
-    <!-- INCLUDE YOUR SUCCESS MESSAGE BELOW -->
-
-    Thanks for your input. We'll be in touch. 
-
-<?php
-}
 ?>
