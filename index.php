@@ -64,7 +64,7 @@ if (isset($_POST['Email'])) {
     // create email headers
     $headers = 'From: ' . $email . "\r\n" .
     $headers = 'Reply-To: ' . $email . "\r\n" .
-    $headers = 'X-Mailer: PHP/' . phpversion();
-    $headers = @mail($email_to, $email_subject, $email_message, $headers);
+    'X-Mailer: PHP/' . phpversion();
+    @mail($email_to, $email_subject, $email_message, $headers);
 
 ?>
