@@ -414,7 +414,7 @@ section .title::after{
 
 /* teams section styling */
 .teams .title::after{
-    content: "Works ";
+    content: "Works";
 }
 .teams .carousel .card{
     background: #222;
@@ -475,13 +475,13 @@ section .title::after{
 .owl-dot:hover{
     background: var(--overlay-color)!important;
 }
-.teams .link {
+.teams .links{
     display: flex;
     flex-direction: row;
     color: #fff;
     decoration: none; 
 } 
-.teams .link a{
+.teams .links a{
     display: inline-block;
     background: var(--overlay-color);
     color: #fff;
