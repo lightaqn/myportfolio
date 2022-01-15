@@ -1,6 +1,3 @@
-
-<?php include_once("index.html");
-?>
 <?php
 if (isset($_POST['Email'])) {
 
@@ -11,7 +8,7 @@ if (isset($_POST['Email'])) {
     function problem($error)
     {
         echo "We're sorry, but the form you submitted contained error(s). ";
-        echo "These errors are displayed below.<br><br>";
+	echo "These errors are displayed below.<br><br>";
         echo $error . "<br><br>";
         echo "Please return and correct these errors.<br><br>";
         die();
